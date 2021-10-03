@@ -17,7 +17,7 @@ async function main() {
   const person2nationality = []
 
   raw.forEach((d) => {
-    persons.set(d.key, [d.key, d.name, d.gender, d.birthdate, d.deathdate])
+    persons.set(d.key, [d.key, d.name, d.gender, d.birthdate, d.deathdate, d.description])
   })
   raw.forEach((d) => {
     if (d.invReltype) {
@@ -40,7 +40,7 @@ async function main() {
   // Save CSVs
   await writeCsv(
     'data/persons.csv',
-    ['key', 'name', 'gender', 'birthdate', 'deathdate'],
+    ['key', 'name', 'gender', 'birthdate', 'deathdate', 'description'],
     sort(Array.from(persons.values())),
   )
   await writeCsv(
@@ -106,13 +106,12 @@ function simplifyPerson(row) {
   return {
     key: simplifyUriEntity(row.human),
     name: row.humanLabel,
+    description: row.humanDescription,
     nationalityKey: simplifyUriEntity(row.nationality),
     nationalityLabel: row.nationalityLabel,
     gender: simplifyGender(row.gender),
     birthdate: simplifyDate(row.birthdate),
     deathdate: simplifyDate(row.deathdate),
-    educationKey: simplifyUriEntity(row.education),
-    educationLabel: row.educationLabel,
     relative: simplifyUriEntity(row.relative),
     invReltype: simplifyReltype(row.invReltype),
   }
