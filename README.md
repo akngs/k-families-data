@@ -7,6 +7,10 @@
 * 인물-인물 관계: https://akngs.github.io/k-families-data/person2person.csv
 * 인물-국적 관계: https://akngs.github.io/k-families-data/person2nationality.csv
 
+데이터 활용 예시:
+
+https://observablehq.com/@akngs/k-families-data
+
 다음 기준으로 데이터를 수집합니다.
 
 * 한반도의 국가(대한민국, 조선민주주의인민공화국, 조선, 고려 등)가 국적인 사람
