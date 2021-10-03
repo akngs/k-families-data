@@ -1,0 +1,34 @@
+{
+  "name": "k-families-data",
+  "version": "0.1.0",
+  "description": "잘 알려진 한반도 사람들의 가족 관계 그래프",
+  "homepage": "https://github.com/akngs/k-families-data#README.md",
+  "type": "module",
+  "scripts": {
+    "fetch": "node --no-warnings src/fetch.mjs",
+    "cleanse": "node src/cleanse.mjs",
+    "cleanup": "rm data/raw-*.csv",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --ext .js src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/akngs/k-families-data"
+  },
+  "bugs": {
+    "url": "https://github.com/akngs/k-families-data/issues",
+    "email": "jania902@gmail.com"
+  },
+  "author": "Alan Kang <jania902@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.2"
+  },
+  "dependencies": {
+    "csv-parser": "^3.0.0",
+    "csv-writer": "^1.6.0",
+    "node-fetch": "^3.0.0"
+  }
+}

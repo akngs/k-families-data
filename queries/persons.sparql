@@ -1,0 +1,16 @@
+SELECT
+  ?human ?humanLabel
+  ?gender ?genderLabel
+  ?birthdate
+  ?deathdate
+  ?nationality ?nationalityLabel
+WHERE {
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "ko,en" . }
+
+  ?human wdt:P31 wd:Q5 ;
+         wdt:P27 [wdt:P706 wd:Q483134 ] ;
+         wdt:P27 ?nationality .
+  OPTIONAL { ?human wdt:P21 ?gender . }
+  OPTIONAL { ?human wdt:P569 ?birthdate . }
+  OPTIONAL { ?human wdt:P570 ?deathdate . }
+}
