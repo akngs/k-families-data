@@ -13,9 +13,11 @@ async function main() {
 
   console.info('Writing raw csvs...')
   fs.mkdir('data', { recursive: true })
-  writeRawCsv('persons', persons)
-  writeRawCsv('relatives', relatives)
-  writeRawCsv('relatives-indirect', relativesIndirect)
+  await Promise.all([
+    writeRawCsv('persons', persons),
+    writeRawCsv('relatives', relatives),
+    writeRawCsv('relatives-indirect', relativesIndirect),
+  ])
 }
 
 async function loadQuery(name) {

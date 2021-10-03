@@ -142,56 +142,59 @@ function simplifyDate(field) {
   return m.slice(1, 4).join('')
 }
 
+const GENDERS = {
+  Q48270: 'nb', // non-binary
+  Q1052281: 'tf', // trans-female
+  Q2449503: 'tm', // trans-male
+  Q6581072: 'f', // female
+  Q6581097: 'm', // male
+}
+
 function simplifyGender(field) {
   const qid = simplifyUriEntity(field)
-  if (qid === null) return null
-  if (qid === 'Q48270') return 'nb' // non-binary
-  if (qid === 'Q1052281') return 'tf' // trans-female
-  if (qid === 'Q2449503') return 'tm' // trans-male
-  if (qid === 'Q6581072') return 'f' // female
-  if (qid === 'Q6581097') return 'm' // male
+  if (!qid) return null
 
-  console.error(`Unknown gender: ${qid}`)
-  console.error(field)
-  return null
+  const simplified = GENDERS[qid]
+  if (!simplified) {
+    console.error(`Unknown gender: ${qid}`)
+    console.error(field)
+    return null
+  }
+
+  return simplified
+}
+
+const RELTYPES = {
+  P22: 'father',
+  P25: 'mother',
+  P26: 'spouse',
+  P40: 'child',
+  P3373: 'sibling',
+  Q31184: 'sibling',
+  Q9238344: 'grandfather',
+  Q9235758: 'grandmother',
 }
 
 function simplifyReltype(field) {
   const qid = simplifyUriEntity(field)
-  if (qid === null) return null
-  if (qid === 'P22') return 'father'
-  if (qid === 'P25') return 'mother'
-  if (qid === 'P26') return 'spouse'
-  if (qid === 'P40') return 'child'
-  if (qid === 'P3373') return 'sibling'
-  if (qid === 'Q31184') return 'sibling'
-  if (qid === 'Q9238344') return 'grandfather'
-  if (qid === 'Q9235758') return 'grandmother'
+  if (!qid) return null
 
-  console.error(`Unknown reltype: ${qid}`)
-  console.error(field)
-  return null
+  const simplified = RELTYPES[qid]
+  if (!simplified) {
+    console.error(`Unknown reltype: ${qid}`)
+    console.error(field)
+    return null
+  }
+  return simplified
 }
 
 function inverseReltype(a, b, reltype) {
-  if (reltype === 'father') {
-    return 'child'
-  }
-  if (reltype === 'grandfather') {
-    return 'grandchild'
-  }
-  if (reltype === 'mother') {
-    return 'child'
-  }
-  if (reltype === 'grandmother') {
-    return 'grandchild'
-  }
-  if (reltype === 'child') {
-    return (a.gender === 'm' || a.gender === 'tm') ? 'father' : 'mother'
-  }
-  if (reltype === 'grandchild') {
-    return (a.gender === 'm' || a.gender === 'tm') ? 'grandfather' : 'grandmother'
-  }
+  if (reltype === 'father') return 'child'
+  if (reltype === 'grandfather') return 'grandchild'
+  if (reltype === 'mother') return 'child'
+  if (reltype === 'grandmother') return 'grandchild'
+  if (reltype === 'child') return (a.gender === 'm' || a.gender === 'tm') ? 'father' : 'mother'
+  if (reltype === 'grandchild') return (a.gender === 'm' || a.gender === 'tm') ? 'grandfather' : 'grandmother'
   return reltype
 }
 
