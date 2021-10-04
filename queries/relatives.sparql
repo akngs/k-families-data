@@ -9,8 +9,11 @@ SELECT
 WHERE {
   SERVICE wikibase:label { bd:serviceParam wikibase:language "ko,en" . }
 
+  # ?relative is instance of(wdt:p31) human(wd:Q5) ;
   ?relative wdt:P31 wd:Q5 ;
+            # who has nationality(wdt:P27) [located in(wdt:P706) Korean Peninsula(Q483134) ] ;
             wdt:P27 [wdt:P706 wd:Q483134 ] ;
+            # who has relation with ?human
             ?invReltype ?human .
 
   OPTIONAL { ?human wdt:P21 ?gender . }
@@ -18,5 +21,6 @@ WHERE {
   OPTIONAL { ?human wdt:P570 ?deathdate . }
   OPTIONAL { ?human wdt:P27 ?nationality . }
 
+  # father(wdt:P22), mother(wdt:P25), spouse(wdt:P26), child(wdt:P40), sibling(wdt:P3373)
   FILTER(?invReltype in (wdt:P22,wdt:P25,wdt:P26,wdt:P40,wdt:P3373))
 }

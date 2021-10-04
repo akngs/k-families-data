@@ -4,36 +4,37 @@ import csvParser from 'csv-parser'
 
 async function main() {
   // Read raw data
-  let raw = []
-  raw = raw.concat(await readCsv('data/raw-relatives.csv'))
-  raw = raw.concat(await readCsv('data/raw-relatives-indirect.csv'))
-  raw = raw.concat(await readCsv('data/raw-persons.csv'))
-  raw = raw.map(simplifyPerson)
+  const files = [
+    'data/raw-relatives.csv',
+    'data/raw-relatives-indirect.csv',
+    'data/raw-persons.csv',
+  ]
+  const raw = (await Promise.all(files.map(readCsv)))
+    .reduce((a, b) => a.concat(b), [])
+    .map(simplifyPerson)
 
   // Normalize
-  const persons = new Map()
-  const nationalities = new Map()
+  const personMap = new Map(raw.map((d) => [
+    d.key,
+    [d.key, d.name, d.gender, d.birthdate, d.deathdate, d.description],
+  ]))
+  const nationalityMap = new Map()
   const person2person = []
   const person2nationality = []
 
-  raw.forEach((d) => {
-    persons.set(d.key, [d.key, d.name, d.gender, d.birthdate, d.deathdate, d.description])
-  })
-  raw.forEach((d) => {
-    if (d.invReltype) {
-      const a = persons.get(d.key)
-      const b = persons.get(d.relative)
-      const { invReltype } = d
-      const reltype = inverseReltype(a, b, invReltype)
-      person2person.push([d.key, d.relative, reltype])
-      person2person.push([d.relative, d.key, invReltype])
+  raw.forEach((rawPerson) => {
+    if (rawPerson.invReltype) {
+      const { invReltype } = rawPerson
+      const reltype = inverseReltype(rawPerson, invReltype)
+      person2person.push([rawPerson.key, rawPerson.relative, reltype])
+      person2person.push([rawPerson.relative, rawPerson.key, invReltype])
     }
-    if (d.nationalityKey) {
-      nationalities.set(
-        d.nationalityKey,
-        [d.nationalityKey, d.nationalityLabel],
+    if (rawPerson.nationalityKey) {
+      nationalityMap.set(
+        rawPerson.nationalityKey,
+        [rawPerson.nationalityKey, rawPerson.nationalityLabel],
       )
-      person2nationality.push([d.key, d.nationalityKey])
+      person2nationality.push([rawPerson.key, rawPerson.nationalityKey])
     }
   })
 
@@ -41,12 +42,12 @@ async function main() {
   await writeCsv(
     'data/persons.csv',
     ['key', 'name', 'gender', 'birthdate', 'deathdate', 'description'],
-    sort(Array.from(persons.values())),
+    sort(Array.from(personMap.values())),
   )
   await writeCsv(
     'data/nationalities.csv',
     ['key', 'name'],
-    sort(Array.from(nationalities.values())),
+    sort(Array.from(nationalityMap.values())),
   )
   await writeCsv(
     'data/person2person.csv',
@@ -187,13 +188,13 @@ function simplifyReltype(field) {
   return simplified
 }
 
-function inverseReltype(a, b, reltype) {
+function inverseReltype(person, reltype) {
   if (reltype === 'father') return 'child'
   if (reltype === 'grandfather') return 'grandchild'
   if (reltype === 'mother') return 'child'
   if (reltype === 'grandmother') return 'grandchild'
-  if (reltype === 'child') return (a.gender === 'm' || a.gender === 'tm') ? 'father' : 'mother'
-  if (reltype === 'grandchild') return (a.gender === 'm' || a.gender === 'tm') ? 'grandfather' : 'grandmother'
+  if (reltype === 'child') return (person.gender === 'm' || person.gender === 'tm') ? 'father' : 'mother'
+  if (reltype === 'grandchild') return (person.gender === 'm' || person.gender === 'tm') ? 'grandfather' : 'grandmother'
   return reltype
 }
 
