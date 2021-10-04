@@ -3,7 +3,7 @@ import { createObjectCsvWriter as createCsvWriter } from 'csv-writer'
 import csvParser from 'csv-parser'
 
 async function main() {
-  // Read raw data
+  // Read raw data from CSV files and combine them as a single array
   const files = [
     'data/raw-relatives.csv',
     'data/raw-relatives-indirect.csv',
@@ -13,7 +13,7 @@ async function main() {
     .reduce((a, b) => a.concat(b), [])
     .map(simplifyPerson)
 
-  // Normalize
+  // Cleanse the data
   const personMap = new Map(raw.map((d) => [
     d.key,
     [d.key, d.name, d.gender, d.birthdate, d.deathdate, d.description],
@@ -39,26 +39,13 @@ async function main() {
   })
 
   // Save CSVs
-  await writeCsv(
-    'data/persons.csv',
-    ['key', 'name', 'gender', 'birthdate', 'deathdate', 'description'],
-    sort(Array.from(personMap.values())),
-  )
-  await writeCsv(
-    'data/nationalities.csv',
-    ['key', 'name'],
-    sort(Array.from(nationalityMap.values())),
-  )
-  await writeCsv(
-    'data/person2person.csv',
-    ['a', 'b', 'reltype'],
-    unique(sort(person2person)),
-  )
-  await writeCsv(
-    'data/person2nationality.csv',
-    ['person', 'nationality'],
-    unique(sort(person2nationality)),
-  )
+  const outputs = [
+    ['data/persons.csv', ['key', 'name', 'gender', 'birthdate', 'deathdate', 'description'], [...personMap.values()]],
+    ['data/nationalities.csv', ['key', 'name'], [...nationalityMap.values()]],
+    ['data/person2person.csv', ['a', 'b', 'reltype'], person2person],
+    ['data/person2nationality.csv', ['person', 'nationality'], person2nationality],
+  ].map(([fileName, fields, data]) => writeCsv(fileName, fields, unique(sort(data))))
+  await Promise.all(outputs)
 }
 
 function readCsv(filename) {
@@ -188,14 +175,20 @@ function simplifyReltype(field) {
   return simplified
 }
 
-function inverseReltype(person, reltype) {
-  if (reltype === 'father') return 'child'
-  if (reltype === 'grandfather') return 'grandchild'
-  if (reltype === 'mother') return 'child'
-  if (reltype === 'grandmother') return 'grandchild'
-  if (reltype === 'child') return (person.gender === 'm' || person.gender === 'tm') ? 'father' : 'mother'
-  if (reltype === 'grandchild') return (person.gender === 'm' || person.gender === 'tm') ? 'grandfather' : 'grandmother'
-  return reltype
+const INV_RELTYPES = {
+  mother: () => 'child',
+  grandmother: () => 'grandchild',
+  father: () => 'child',
+  grandfather: () => 'grandchild',
+  spouse: () => 'spouse',
+  sibling: () => 'sibling',
+  child: (p) => (p.gender === 'm' || p.gender === 'tm' ? 'father' : 'mother'),
+  grandchild: (p) => (p.gender === 'm' || p.gender === 'tm' ? 'grandfather' : 'grandmother'),
 }
 
+function inverseReltype(person, reltype) {
+  return INV_RELTYPES[reltype](person)
+}
+
+// eslint doesn't recognize async/await in top-level code yet
 main().then()
