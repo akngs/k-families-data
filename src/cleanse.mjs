@@ -2,8 +2,9 @@ import { createReadStream } from 'fs'
 import { createObjectCsvWriter as createCsvWriter } from 'csv-writer'
 import csvParser from 'csv-parser'
 
+/** Turns raw csvs into cleansed csvs */
 async function main() {
-  // Read raw data from CSV files and combine them as a single array
+  // Read raw csvs and combine them as a single array
   const files = [
     'data/raw-relatives.csv',
     'data/raw-relatives-indirect.csv',
@@ -39,7 +40,7 @@ async function main() {
     }
   })
 
-  // Save CSVs
+  // Save cleansed csvs
   const outputs = [
     ['data/persons.csv', ['key', 'name', 'gender', 'birthdate', 'deathdate', 'description'], [...personMap.values()]],
     ['data/nationalities.csv', ['key', 'name'], [...nationalityMap.values()]],
