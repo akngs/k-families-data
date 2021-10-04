@@ -12,6 +12,7 @@ async function main() {
   const raw = (await Promise.all(files.map(readCsv)))
     .reduce((a, b) => a.concat(b), [])
     .map(simplifyPerson)
+    .filter((p) => p.key)
 
   // Cleanse the data
   const personMap = new Map(raw.map((d) => [
