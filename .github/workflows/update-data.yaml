@@ -20,6 +20,7 @@ jobs:
         npm run fetch
         npm run cleanse
         npm run cleanup
+        wc -l data/*
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
