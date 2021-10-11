@@ -1,19 +1,16 @@
-SELECT
-  ?human ?humanLabel ?humanDescription
-  ?gender ?genderLabel
-  ?birthdate
-  ?deathdate
-  ?nationality ?nationalityLabel
+SELECT ?human ?humanLabel ?humanDescription ?gender ?birthdate ?deathdate ?nationality ?nationalityLabel
 WHERE {
+  {
+    SELECT ?human ?humanDescription ?gender ?birthdate ?deathdate ?nationality
+    WHERE {
+      ?human
+             # who has nationality(wdt:P27) [located in(wdt:P706) Korean Peninsula(Q483134) ] ;
+             wdt:P27 [wdt:P706 wd:Q483134 ] ;
+             wdt:P27 ?nationality ;
+             wdt:P569 ?birthdate .
+      OPTIONAL { ?human wdt:P21 ?gender . }
+      OPTIONAL { ?human wdt:P570 ?deathdate . }
+    }
+  }
   SERVICE wikibase:label { bd:serviceParam wikibase:language "ko,en" . }
-
-  # ?human is instance of(wdt:p31) human(wd:Q5) ;
-  ?human wdt:P31 wd:Q5 ;
-         # who has nationality(wdt:P27) [located in(wdt:P706) Korean Peninsula(Q483134) ] ;
-         wdt:P27 [wdt:P706 wd:Q483134 ] ;
-         # call it as ?nationality .
-         wdt:P27 ?nationality .
-  OPTIONAL { ?human wdt:P21 ?gender . }
-  OPTIONAL { ?human wdt:P569 ?birthdate . }
-  OPTIONAL { ?human wdt:P570 ?deathdate . }
 }

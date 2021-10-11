@@ -9,7 +9,7 @@ async function main() {
   console.info('Running sparql queries...')
   const queryNames = ['persons', 'relatives', 'relatives-indirect']
   const queries = await Promise.all(queryNames.map(loadQuery))
-  const results = await Promise.all(queries.map(query))
+  const results = await Promise.all(queries.map((q, i) => query(queryNames[i], q)))
 
   console.info('Writing raw csvs...')
   fs.mkdir('data', { recursive: true })
@@ -27,11 +27,14 @@ async function writeRawCsv(name, content) {
 }
 
 /** Executes sparql query */
-async function query(sparql) {
+async function query(queryName, sparql) {
+  const start = Date.now()
   const url = new URL(WDQS_ENDPOINT)
   url.search = new URLSearchParams({ query: sparql })
   const res = await fetch(url, { headers: { Accept: 'text/csv' } })
   const text = await res.text()
+  const end = Date.now()
+  console.info(`Time elasped for query "${queryName}": ${end - start}ms`)
 
   if (res.status !== 200) {
     console.error(res.status)
