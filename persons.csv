@@ -823,11 +823,11 @@ Q1106583,조재민,m,19780522,,South Korean footballer
 Q11073341,혜리,f,19940609,,South Korean singer and actress
 Q11074533,성유진,f,19921027,,South Korean singer
 Q110749975,Keon Yeob Lim,m,19870101,,cyclist
-Q110822953,김태연,m,19970610,,Korean baseball player
 Q1108589,Kim Dae-young,m,19620815,,South Korean football (assistant) referee
 Q110868016,Dongyoun Hwang,m,19620101,,South Korean historian
 Q110877360,박장식,m,19110109,20110504,
 Q110878905,김동휘,m,19951226,,대한민국의 배우
+Q110884989,정근,m,19600908,,"대한민국의 의사, 정치인"
 Q11094849,주도일,m,19210325,19940705,politician
 Q11094986,윤진솔,f,19901008,,대한민국의 전직 가수이자 현재 배우 (1990년)
 Q11094993,박기서,m,19260101,20100104,
@@ -1197,7 +1197,7 @@ Q11488697,서능욱,m,19580505,,대한민국의 바둑 기사
 Q11488700,서휘,m,19160101,19930101,politician
 Q1149192,김다솔,m,19890101,,South Korean pianist
 Q11498796,양현규,m,19830513,,association football player
-Q11499920,문효진,m,19430210,20080317,
+Q11499920,문효진,m,19200106,20080317,
 Q11500068,문지윤,f,19710419,,South Korean judoka
 Q1150848,박종훈,m,19650506,,Olympic gymnast
 Q11518203,박창언,m,19581128,,South Korean baseball player
@@ -3461,7 +3461,7 @@ Q12597086,박정환 (1977년),m,19771023,,South Korean baseball player (1977-)
 Q12597087,박호산,m,19721018,,배우
 Q12597096,박제행,m,19030101,,South Korean film actor
 Q12597098,박종규,m,19300528,19851203,South Korean politician
-Q12597101,박종근 (1937년),m,19370205,20220101,South Korean politician
+Q12597101,박종근 (1937년),m,19370205,,South Korean politician
 Q12597102,박종근,m,19200101,19520217,"조선민주주의인민공화국의 군인, 빨치산"
 Q12597103,박종근 (1944년),m,19440907,,North Korean politician
 Q12597108,박종문 (1932년),m,19320101,,South Korean politician
@@ -3711,7 +3711,7 @@ Q12598201,변우영,,19690621,,
 Q12598204,변재일,m,19480902,,South Korean politician
 Q12598207,변종필,m,19660728,,South Korean voice actor
 Q12598211,변주연,f,19981008,,South Korean actress
-Q12598213,변중석,f,19380319,20070817,(1921-2007)
+Q12598213,변중석,f,19151125,20070817,(1921-2007)
 Q12598215,변진수,m,19930401,,South Korean baseball player
 Q12598218,변탁,m,19380425,20190811,South Korean businessperson
 Q12598219,변한후,m,10500101,,
@@ -4811,7 +4811,7 @@ Q12610816,이가현,f,19880518,,South Korean actress
 Q12610817,이가이,f,19680719,,South Korean singer
 Q12610821,이가흔 (대한민국 배우),f,19860404,,South Korean actress
 Q12610822,이가희,f,19850427,,South Korean singer
-Q12610828,이갑,m,19620923,20141213,대한제국의 황손
+Q12610828,이갑,m,19091028,20141213,대한제국의 황손
 Q12610831,이갑성,m,18891023,19810325,South Korean politician (1889-1981)
 Q12610834,이갑용 (관료),m,18940404,19660530,
 Q12610835,이강국,m,19450917,,대한민국의 법조인
@@ -7537,7 +7537,7 @@ Q15015214,김득명,,19230911,20090304,
 Q15040217,박성삼,,19070101,19870101,
 Q15043278,서광미,f,19650201,,Olympic field hockey player
 Q15049444,하리,f,19900206,,South Korean singer
-Q15057674,문흥진,m,19690101,19840102,South Korean unificiationist leader
+Q15057674,문흥진,m,19200106,19840102,South Korean unificiationist leader
 Q15058913,Hwang He-Suk,f,19451209,,volleyball player
 Q15059040,Jong Ok-Jin,f,19450606,,North Korean volleyball player
 Q15064692,김재호,m,19850321,,South Korean baseball player
@@ -7871,7 +7871,6 @@ Q15881906,Shin In-ha,m,20000101,,North Korean politician
 Q15885410,서경덕 (1974년),m,19740525,,South Korean nationalist scholar and social activist
 Q15890651,임충식,m,19220423,19741209,South Korean general and politician
 Q15890941,Albertina Eunju Song,f,19840101,,South Korean pianist
-Q159059,그라피치,m,19790402,,Brazilian footballer
 Q15908135,최희,f,19860718,,대한민국의 방송인
 Q15909117,이세호,m,19250726,20130428,South Korean military personnel
 Q15909458,김소희,f,19960819,,South Korea alpine skier
@@ -8374,7 +8373,7 @@ Q16080103,권갑주,,19290101,,South Korean politician
 Q16080104,권기선,f,19600510,,South Korean actress
 Q16080107,권복인,,19120829,19780530,South Korean politician
 Q16080108,권성덕,m,19400817,,South Korean film actor
-Q16080109,권성동,m,19600429,,South Korean politician
+Q16080109,권성동,m,19600429,,대한민국의 정치인
 Q16080110,권성현,f,19801027,,South Korean actress
 Q16080112,권영세,m,19530213,,South Korean politician
 Q16080113,권영세,m,19590224,,South Korean politician
@@ -9092,7 +9091,7 @@ Q16090626,윤덕홍,,19470419,,
 Q16090628,윤동배,m,19660303,,South Korean baseball player (1966-)
 Q16090632,윤박,m,19871118,,South Korean actor
 Q16090633,윤상현,m,19621201,,대한민국의 남자 정치인
-Q16090635,윤석열,m,19601218,,"대한민국의 정치인, 제43대 검찰총장"
+Q16090635,윤서결,m,19601218,,"대한민국의 정치인, 제43대 검찰총장"
 Q16090636,윤성현,f,19820803,,영화 감독
 Q16090638,윤세영,m,19330522,,
 Q16090641,윤순영,f,19520611,,
@@ -9724,7 +9723,7 @@ Q16093115,황낙주,m,19280322,20021212,South Korean politician
 Q16093141,홍재형,m,19380327,,South Korean politician
 Q16093217,구자명,m,19900319,,South Korean association football player
 Q16093223,구자욱,m,19930304,,South Korean baseball player
-Q16093226,구자홍,m,19461211,,
+Q16093226,구자홍,m,19461211,20220211,대한민국의 기업인
 Q16093283,강인원,m,19560106,,Korean singer
 Q16093317,강철원,m,19580127,,South Korean baseball player (1958-)
 Q16093359,김광섭,m,19050922,19770523,South Korean poet
@@ -10279,7 +10278,7 @@ Q16173287,김기창,m,19200101,20010123,
 Q16173290,윤희주,f,19781102,,South Korean actress
 Q16173292,최종환,,19940414,,South Korean pro gamer
 Q16173293,한필수,,19001106,19860410,South Korean politician (1900-1986)
-Q16173298,김기철,m,19170531,19861010,1917년생 대한민국의 정치인
+Q16173298,김기철,m,19170530,19861010,1917년생 대한민국의 정치인
 Q16173307,최종훈,m,19790529,,South Korean actor
 Q16173313,김기태,m,19870511,,South Korean baseball player (born 1987)
 Q16173319,한현민,m,19811110,,South Korean comedian
@@ -17326,10 +17325,8 @@ Q25190230,이민기,m,19930519,,association football player
 Q25190398,김민정,f,19970326,,대한민국의 사격 선수
 Q25190446,채광진,m,19940204,,대한민국의 전 리그 오브 레전드 프로게이머
 Q25190568,버피,m,19950615,,South Korean singer
-Q2522349,김성간,m,19121117,19840529,일본의 축구 선수
 Q25223676,이창석,m,19940623,,대한민국의 전 리그 오브 레전드 프로게이머·현 프로게임단 지도자
 Q25227173,박남옥,f,19230224,20170408,actor (1923-2017)
-Q252304,스테비차 리스티치,m,19820523,,Macedonian association football player
 Q25252434,위태웅,m,19931228,,대한민국의 바둑 기사
 Q25252435,안정기,m,19970709,,대한민국의 바둑 기사
 Q25252474,박태희,f,19940225,,대한민국의 바둑 기사
@@ -19077,7 +19074,6 @@ Q30949426,리은철,m,19950713,,association football player
 Q30949603,율희,f,19971127,,대한민국의 가수이자 라붐의 전 멤버
 Q30949851,임영민,m,19951225,,South Korean rapper
 Q30951190,안형섭,m,19990809,,South Korean singer
-Q3101386,조지 알핫산,m,19551111,,association football player
 Q31036131,Pius Moon Chang-woo,m,19630315,,
 Q31038128,Job Koo Yobi,m,19510125,,Roman Catholic bishop
 Q310673,정대세,m,19840302,,축구 선수
@@ -20314,7 +20310,7 @@ Q4290912,Pak Chung-il,m,19870103,,North Korean association footballer
 Q4291103,오민석,m,19800422,,대한민국의 배우
 Q4292958,카라펫 미카엘리안,m,19690927,,footballer
 Q4307061,문국진,m,19700717,,Korean-American businessman
-Q4307062,문인진,f,19690101,,American unificationist leader
+Q4307062,문인진,f,19200106,,American unificationist leader
 Q43073768,인수,m,19880310,,대한민국의 가수
 Q43076461,김예진,f,19991220,,South Korean short track speed skater
 Q430805,조경란,f,19690101,,Korean writer
@@ -20799,7 +20795,7 @@ Q482883,김두현,m,19820714,,South Korean footballer
 Q482887,이종범,m,19700815,,대한민국의 야구 선수
 Q482889,윤영선,m,18961225,19880206,대한민국의 정치인
 Q482893,성서 초등학생 실종 사건,,19851217,20020926,"1991년 대한민국 대구에서 발생한 초등학생 5명 실종, 살해당한 사건, 장기 미제 사건"
-Q482900,윤웅렬,m,18990101,19110101,조선 말기의 무신
+Q482900,윤웅렬,m,18950217,19110101,조선 말기의 무신
 Q482901,권영길,m,19411105,,Korean politician and journalists
 Q482910,신성모,m,18911020,19600529,South Korean politician (1891-1960)
 Q482915,사재혁,m,19850129,,"대한민국의 전 역도선수, 범죄자"
@@ -20864,7 +20860,6 @@ Q483381,이관우,m,19780225,,South Korean footballer
 Q483429,정형돈,m,19780207,,대한민국의 희극인 출신 방송인
 Q483446,김건모,m,19680113,,대한민국의 가수
 Q483450,정준하,m,19710318,,대한민국의 방송인
-Q483457,마그누 아우베스,m,19760113,,브라질의 축구 선수
 Q483467,진안대군,m,13351019,13930101,조선 초기의 왕자
 Q483471,곽태휘,m,19810708,,South Korean association football player
 Q483510,남태희,m,19910703,,대한민국의 축구 선수
@@ -21487,7 +21482,7 @@ Q489232,박성환,m,19840904,,대한민국의 배드민턴 선수
 Q489246,최경주,m,19700519,,South Korean professional golfer
 Q489257,황지만,m,19840708,,대한민국의 배드민턴 선수
 Q489271,우장춘,m,18980408,19590810,"Agricultural scientist, botanist (1898-1959)"
-Q489279,김형직,m,18710819,19260605,"일제 강점기 독립 운동가, 김일성의 아버지"
+Q489279,김형직,m,19200921,19260605,"일제 강점기 독립 운동가, 김일성의 아버지"
 Q489286,피터 정,m,19610419,,Korean-American animator
 Q489290,김문수,m,19631229,,대한민국의 배드민턴 선수
 Q489302,김병현,m,19790119,,South Korean baseball player
@@ -21836,7 +21831,6 @@ Q492997,이동건,m,19800726,,"대한민국의 배우, 가수"
 Q493021,최수종,m,19621228,,대한민국의 배우
 Q493026,송윤아,f,19730607,,"대한민국의 배우, 모델"
 Q493041,박빛나,f,19850616,,figure skater
-Q493072,라데 보그다노비치,m,19700521,,Serbian association football player
 Q493090,별,f,19831022,,대한민국의 가수
 Q493100,김기덕,m,19340929,20170907,대한민국의 영화감독 및 교수
 Q4931033,송보배,f,19860222,,대한민국의 골프 선수
@@ -21910,7 +21904,7 @@ Q493753,고원준,m,19900623,,대한민국의 야구인
 Q493769,고려 문종,m,10500101,10830908,고려의 11대 임금
 Q493785,고려 순종,m,10500101,10831211,고려의 12대 임금
 Q493786,안두희,m,19170324,19961023,"대한민국의 군인, 독립운동가 김구의 암살범"
-Q493797,고려 선종,m,11000101,10940623,고려의 13대 임금
+Q493797,고려 선종,m,10500101,10940623,고려의 13대 임금
 Q493812,고려 헌종,m,11000101,10971106,고려의 14대 임금
 Q493813,이희도,m,19551001,,South Korean actor
 Q493830,고려 숙종,m,10500101,11051117,고려의 15대 임금
@@ -22420,7 +22414,7 @@ Q50940069,조병현,m,19320101,,South Korean basketball player (1932-)
 Q5095021,윤치원,m,19590602,,South Korean businessman
 Q50973131,명정강,f,19600101,20180323,"대한민국의 드럼 연주자, 배우"
 Q5099479,진대제,m,19520101,,South Korean politician and businessman
-Q51024,이우,m,18770330,19450807,"대한제국의 황족, 의친왕의 차남"
+Q51024,이우,m,19091028,19450807,"대한제국의 황족, 의친왕의 차남"
 Q51029,이방자,f,19011104,19890430,의민태자의 부인
 Q5103328,Cho Byung-Kwan,m,19810505,,South Korean wrestler
 Q5103329,조병화,m,19210502,20030308,Korean writer
@@ -24233,7 +24227,6 @@ Q56025870,Kim Hyang-Soo,m,19780101,,South Korean taekwondo practitioner
 Q56025872,Nam Yeon-Sik,m,19800101,,South Korean taekwondo practitioner
 Q56025879,Lee Jae-Shin,m,19810126,,South Korean taekwondo practitioner
 Q56025895,Kang Ji-Hyun,f,19810111,,South Korean taekwondo practitioner
-Q56042353,Ramon Laguarta,m,19630101,,"Businessperson and corporate director, Chair and CEO, PepsiCo"
 Q56045225,Yun Sung-Hee,f,19810707,,South Korean taekwondo practitioner
 Q56045230,Kim Su-Ok,f,19830101,,South Korean taekwondo practitioner
 Q5605360,그렉 브라운,m,19620729,,"association football player from Manchester, England"
@@ -24369,13 +24362,13 @@ Q56434915,김영숙,f,19470101,,정치인 김동조의 자녀
 Q56434940,김영자,f,19500620,,정치인 김동조의 자녀
 Q56434961,허광수,m,19460101,,"대한민국의 기업가, 삼양인터내셔널 회장"
 Q56434988,김민영,m,19580101,,한국외국어대학교 교수
-Q56435674,정봉식,m,19371207,,기업가 정주영의 아버지
+Q56435674,정봉식,m,19151125,,기업가 정주영의 아버지
 Q56435719,정경희,f,19440101,,기업가 정주영의 자녀
 Q56435849,정은희,f,19710101,,기업가 정몽필의 자녀
 Q56435856,소주연,f,19931231,,대한민국의 모델 겸 배우
 Q56435865,김석원,m,19450101,,"기업인, 전 쌍용그룹회장"
 Q56435874,박문순,f,19450101,,성곡미술관 관장
-Q56435884,김지용,m,19450101,,전 용평리조트 상무
+Q56435884,김지용,m,19730101,,전 용평리조트 상무
 Q56435896,정유희,f,19730101,,기업가 정몽필의 자녀
 Q5643829,함찬미,f,19940502,,대한민국의 수영 선수
 Q5643853,함형규,m,19860505,,footballer
@@ -26140,7 +26133,7 @@ Q626461,의안대군,m,13820101,13980903,조선 태조의 왕자
 Q626466,경순왕후,f,,,조선 도조의 왕비
 Q626471,MC 스나이퍼,m,19790208,,South Korean rapper
 Q626480,손대호,m,19810911,,South Korean footballer
-Q626491,정명화,f,19530122,,한국의 첼리스트
+Q626491,정명화,f,19480326,,한국의 첼리스트
 Q626494,장건상,m,18821219,19740514,politician (1882-1974)
 Q626498,김환진,m,19550625,,대한민국의 전 권투 선수
 Q626501,김석수,m,19321120,,
@@ -28818,7 +28811,7 @@ Q77840,김현수,m,19880112,,대한민국의 야구 선수
 Q77840844,Ri Pyong,m,18960506,,ex-wife of Song Hye-rim
 Q77841131,Ri Ok-dol,f,19370124,,half-sister of Kim Jong-nam
 Q77841796,이종혁,m,19361030,,North Korean politician
-Q77843446,장용환,m,19330407,,father of Jang Sung-taek
+Q77843446,장용환,m,19460122,,father of Jang Sung-taek
 Q77846980,Jang Kye-sun,f,19460122,,sister of Jang Sung-taek
 Q77847863,Jang Myong-hui,f,19390113,,wife of Jang Song-gil
 Q77862076,권혁규,m,20010313,,대한민국의 축구 선수
@@ -28871,7 +28864,7 @@ Q7878002,엄복동,m,18920101,19510101,Korean cyclist
 Q78796147,이동률,m,20000609,,South Korean football player
 Q7880974,엄앵란,f,19360320,,대한민국의 배우
 Q7880979,Um Da-Woon,m,19850727,,South Korean footballer
-Q7881979,Un Jin Moon,f,19430210,,Equestrian and daughter of Sun Myung Moon
+Q7881979,Un Jin Moon,f,19200106,,Equestrian and daughter of Sun Myung Moon
 Q7882103,Una Damon,f,19640810,,South Korean-American actress
 Q79017587,AJ,m,19910604,,South Korean musician
 Q7906149,김빛내리,f,19690101,,대한민국의 생명과학자
@@ -30161,7 +30154,7 @@ Q97767595,In-Suk Shin,f,19880920,,South Korean association football player
 Q97817893,유주현,f,20010224,,대한민국의 바둑 기사
 Q97883802,장형석,m,19930228,,대한민국의 전 리그 오브 레전드 프로게이머
 Q97924684,김혜연,f,19930905,,North Korean table tennis player
-Q97932927,Huijun,m,20031007,,
+Q97932927,Huijin,m,20031007,,
 Q97940719,조슬예,f,19850101,,대한민국의 영화 감독
 Q97961592,김상문,m,19940904,,대한민국의 전 리그 오브 레전드 프로게이머
 Q97961628,원상연,m,19921030,,대한민국의 전 리그 오브 레전드 프로게이머
