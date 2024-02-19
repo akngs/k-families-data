@@ -1,5 +1,4 @@
 key,name
-Q1033,나이지리아
 Q10856065,
 Q114,케냐
 Q117,가나
@@ -37,8 +36,7 @@ Q29999,네덜란드 왕국
 Q30,미국
 Q30623,만주국
 Q31,벨기에
-Q33,핀란드
-Q334,싱가포르
+Q33,
 Q34,스웨덴
 Q36,폴란드
 Q38,이탈리아
@@ -61,7 +59,6 @@ Q69510839,
 Q699871,태봉
 Q705044,북조선인민위원회
 Q7313,
-Q733,파라과이
 Q739,콜롬비아
 Q79,이집트
 Q8646,홍콩
@@ -69,7 +66,7 @@ Q865,중화민국
 Q869,태국
 Q878309,리 왕조
 Q881,
-Q884,SPARQL-QUERY: queryStr=SELECT ?human ?humanLabel ?humanDescription ?gender ?birthdate ?deathdate ?nationality ?nationalityLabel
+Q884,대한민국
 Q902,방글라데시
 Q929,중앙아프리카 공화국
 Q96,멕시코
