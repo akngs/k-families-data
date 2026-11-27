@@ -37,7 +37,8 @@ Q30,미국
 Q30623,만주국
 Q31,벨기에
 Q33,
-Q36,
+Q34,스웨덴
+Q36,폴란드
 Q37,
 Q38,이탈리아
 Q39,
@@ -57,13 +58,14 @@ Q699871,태봉
 Q705044,북조선인민위원회
 Q7313,
 Q739,콜롬비아
+Q79,이집트
 Q865,
 Q869,태국
 Q8733,
 Q878,아랍에미리트
 Q878309,리 왕조
 Q881,
-Q884,대한민국
+Q884,대SPARQL-QUERY: queryStr=SELECT ?human ?humanLabel ?humanDescription ?gender ?birthdate ?deathdate ?nationality ?nationalityLabel
 Q929,중앙아프리카 공화국
 Q96,멕시코
 Q974,콩고 민주 공화국
